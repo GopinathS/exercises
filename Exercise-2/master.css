@@ -2,31 +2,37 @@ body{
 background:gray;
 }
 
+.pagination {
+    font-size: 12px;
+    margin: 8px 0;
+}
+.pagination .disabled {
+    color: #999999;
+}
+.pagination em {
+    font-style: normal;
+}
+.pagination a, .pagination em, .pagination .previous_page, .pagination .next_page {
+    padding: 4px;
+}
 #page-container{
 width:960px;
 margin:auto;
 background:white;
 }
-#two-column{
-}
+
 #two-column div#left{
-float:left;
-width:670px;
+position:relative;
 height:100%;
-padding:10px;
-margin-bottom:25px;
-}
-#two-column div#left1{
-float:left;
-width:670px;
+width:80%;
 padding:10px;
 margin-bottom:25px;
 }
 
+
 #two-column div#right{
 border-left:1px solid gray;
-background:#FFE4C4;
-width:240px;
+width:180px;
 height:98%;
 margin-left:698px;
 margin-right:8px;
@@ -37,14 +43,13 @@ right:0px;
 }
 div#header{
 background-color:#c7e0fb;
-text-decoration:blink;
+background-image:url('keyboard.jpg');
 padding:10px;
 
 }
 
 div#footer{
 background-color:#c7e0fb;
-text-decoration:blink;
 padding:10px;
 clear:both;
 }
