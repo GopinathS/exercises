@@ -1,42 +1,113 @@
-
 <html>
 
-<head><title>Positioning</title>
-
-<style type="text/css">
-
-#box_1 { 
-position: static;
-width: 200px;
-height: 200px;
-background: #ee3e64;
-}
-
-#box_2 { 
-position: static;
-width: 200px;
-height: 200px;
-background: #44accf;
-}
-
-#box_3 { 
-position: static;
-width: 200px;
-height: 200px;
-background: #b7d84b;
-}
-
-<style>
-
-<head>
-
+<head><link type="text/css" href="master.css" rel="stylesheet"/>
+<title>Positioning</title>
+</head>
 
 <body>
 
-<div id="box_1"></div>
+<img id="header" src="Untitled.png"></img>
 
-<div id="box_2"></div>
+<div id="navigation">
 
-<div id="box_3"></div>
+<b>Absolute Positioning :</b><br>
+
+<br /><ul>
+
+
+
+<li>As we can see the below images for which the positioning is absolute , the elements are  positioned exactly by specifying the top,left,right,bottom parameters .<br>
+</li>The absolute positioning does not occupy any space.We can position the elements wherever we want using those parameters.After the positioning of any element, the other elements would be positioned differently with respect to the absolute positioned element.<br>
+<li>As we can see below ,the images are overlapped which says the images are absolute positioned and does not occupy any space which made the second images to overlap.
+</li>
+</ul></div>
+
+
+<div id="wrapper">
+<div id="position3"> <center><img src="images.jpeg"/></center>
+ </div>
+
+<div id="position4"> <center><img src="images3.jpeg" width=70% height=70%/></center>
+ </div> 
+</div>
+
+<hr />
+
+<div id="navigation">
+
+<b>Static Positioning :</b><br>
+
+<br /><ul>
+<li>The default positioning for all the elements is static position which  occurs one by one as in document.</li>
+
+<br>
+<li>As we can see below ,the images are positioned as static and occurs where it normally would in the document.
+</li>
+</ul></div>
+<div id="navigation">
+<div id="position1"> <center><img src="images1.jpeg"/></center>
+ </div>
+
+
+<div id="position2"> <center><img src="index.jpeg"></center>
+ </div>
+</div>
+
+<br>
+<hr />
+<br>
+<div id="navigation">
+
+<b>RELATIVE Positioning :</b><br>
+
+<br /><ul>
+
+
+
+<li>As we can see the below images for which the positioning is relative , the elements are  positioned exactly by specifying the top,left,right,bottom parameters .
+<br>
+</li>The content of relatively positioned elements can be moved and overlap other elements, but the reserved space for the element is still preserved in the normal flow. The other elements would not be allowed to occupy that space which is the major difference with absolute positioning .
+<br>
+<li>As we can see the below images are overlapped one on one which says the first image occupied some space which made the other image (absolute) to overlap on it.
+<br>
+</li>
+</ul></div>
+
+
+<div id="navigation">
+<div id="position5"> <center><img src="images2.jpeg"/></center>
+ </div>
+
+<div id="position6"> <center><img src="images4.jpeg"/></center>
+ </div> 
+
+<br>
+<hr />
+<br>
+</div>
+<div id="navigation">
+
+<b>Floating Left/Right :</b><br>
+<p><italic>A floated element will move as far to the left or right as it can. Usually this means all the way to the left or right of the containing element.
+<br />
+
+
+<div id="position7"> <center><img src="images5.jpeg" width=120%/></center>
+ </div>
+
+</div>
+
+
+ <img  id="position8" src="images8.jpeg" width=30% height=45%/>
+ 
+
+
+<div id="footer"></div>
+
+
+
+
 
 </body>
+
+</html>
