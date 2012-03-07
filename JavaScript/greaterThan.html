@@ -1,0 +1,61 @@
+<html>
+<head>
+<script type="text/javascript">
+function fact()
+{
+
+//var m=document.getElementById("hi").value;
+//alert("Please enter the number rrrrrrrrrr!!!"+m);
+//return function(m){
+//
+//if(m>=9){
+//alert("Please enter the number gggggggg!!!"+m);
+//alert("The given number is "+m+" and greater than 10 ");
+//
+//
+//}else if(m<=11){
+//
+//alert("The given number is "+m+" and lesser than 10 ");
+//
+//} else if(m==10){
+//
+//alert("The given number is "+m+" and equal to 10 ");
+//}
+//else {
+//alert("Please enter the number !!!");
+//}
+//
+//}
+
+function greaterThan(num1)
+{
+	function Test(num2)
+	{
+		if(num2>num1)
+		{
+			alert("Number2 is greater than Number1");
+		}
+		else
+		{
+			alert("Number1 is greater than Number2");
+		}
+	}
+	return Test;
+}
+var c=greaterThan(15);
+alert(c(6));
+}
+</script>
+</head>
+
+
+<body><center>
+<form id="validate" method="get">
+    Enter the number  <input id="hi" name="fname" type="text"></input><br />
+    </p>
+<button type="button" onclick="fact()" >Result</button>
+  </form></center>
+     
+
+</body>
+</html> 

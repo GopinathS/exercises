@@ -1,0 +1,114 @@
+<!doctype html>
+ <html lang="en"> 
+ <head>
+   <meta charset="UTF-8">
+   <title>Todo Application</title>
+   <meta name="description" content="">
+   <meta name="author" content="">
+ <link type="text/css" href="search.css" rel="stylesheet"/>
+   <script type="text/javascript">
+	   
+function add()
+{ 
+
+	var task1=document.getElementById("sasa").value;
+	if(task1.length>200){
+		
+		alert("The string exceeded 200 characters !!!!");
+		//hh("sasa");
+		
+		}else{
+	
+	var i,j;
+	var task=document.getElementById("sasa").value; 
+	var tasks=new Array();
+	tasks[0]=task;
+	//var newitem = document.createElement("list");
+	//var text = document.createTextNode(tasks[0]);
+    cbh=document.getElementById("task");
+    
+    
+   var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cbh.appendChild(cb);
+    //cb.name = val;
+    //cb.value = tasks[0];
+    
+    cbh.appendChild(document.createTextNode(tasks[0]));
+   
+    hh("sasa");
+    
+    
+var x=document.getElementById("newid");
+//var t=x.childElementCount;
+var d=new Date();
+document.getElementById("lbl").innerText = "Last modified date is "+d; 
+//alert("Last item is added on "+d+" the count is "+t);
+}
+
+}
+
+
+
+function hh(element){
+	document.getElementById(element).value=''; 
+}
+
+function greaterThan(num1)
+{
+	function Test(num2)
+	{
+		var n=num2;
+	}
+	return Test;
+}
+
+
+function google(){
+	var text=document.getElementById("text_area").value; 
+	if(text.length==0 || text.length==""){
+		alert("Enter the value to be searched !!!!");
+			}else{
+				
+				open("https://www.google.co.in/#hl=en&output=search&sclient=psy-ab&q="+text);
+				alert("hi");
+				
+			}
+	
+}
+    
+</script>
+ </head>
+ 
+
+ <body>
+ 
+ 	  <div id="main_page"><img src="background.png"  width=250%/>
+	 <form id="task">
+     <h1>Todos</h1>
+     <h2>What needs to get done today?</h2>
+     <input type="text" name="nameOfItem" id="sasa"  > <strong><label id="lbl"> Last modified date :</label></strong>
+     <br/>
+     <input type="button"  value="Add Todo" onclick="add()" onLoad="this.form.reset()"  >
+     <br/>
+     
+      </form>
+      </div>
+      
+       <div id="search_page">
+	 <form id="task1">
+     <h1>Google Search</h1>
+    
+     <input type="text" name="nameOfItem" id="text_area"  >
+     <br/>
+     <input type="button" id="search1" value="Search" onclick="google()"  onLoad="this.form.reset()"  >
+     <br/>
+      </form>
+      </div>
+      
+      
+      
+      
+     
+ </body>
+ </html>

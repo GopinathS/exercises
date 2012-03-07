@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+function fact()
+{
+
+var n=1,fact=1;
+var m=document.getElementById("hi").value;
+while(n<=m)
+{
+fact=fact*n;
+n++;
+}
+alert("Factorial of given number :"+" "+ fact);
+}
+</script>
+</head>
+
+
+<body><center>
+<form>
+    Enter the number  <input id="hi" name="fname" type="text"></input><br />
+    </p>
+<button type="button" onclick="fact()" >Result</button>
+  </form></center>
+     
+
+</body>
+</html> 
