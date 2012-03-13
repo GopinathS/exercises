@@ -1,0 +1,242 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	
+  <head>
+  <title>Document</title>
+  <!-- Add JQuery here -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+      $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button1').toggle(function() {
+              $("*").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+      
+      
+      $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button2').toggle(function() {
+              $("li").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+      
+      $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button3').toggle(function() {
+              $("p").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+        $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button4').toggle(function() {
+              $("#list1").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+        $("document").ready(function() {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          $('#button5').toggle(function() {
+              $(".a").css("border", "3px solid red");
+          }, function() {
+              $("p").css("border", "");
+          });
+      });
+      
+      $(document).ready(function(){
+		  
+		  $($("a[rel='attribute1']")).toggle(function (){
+			   $("a[rel='attribute1']").css("border", "3px solid red");
+			  }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });  
+		  
+		    $(document).ready(function(){
+		  
+		  $($("a[rel='attribute2']")).toggle(function (){
+			   $("a[rel='attribute2']").css("border", "3px solid red");
+			  }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });  
+		  
+		    $(document).ready(function(){
+		  
+		  $($("a[rel='attribute3']")).toggle(function (){
+			   $("a[rel='attribute3']").css("border", "3px solid red");
+			  }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });     
+		  
+		  
+		  $(document).ready(function(){
+		$($("#button6")).toggle(function (){  
+		  $("tr:even").css("background-color", "#bbbbff"); 
+      }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });  
+		  
+		  
+           $(document).ready(function(){
+		$($("#button7")).toggle(function (){  
+		  $("tr:odd").css("background-color", "gray"); 
+      }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });  
+		  
+		  	  
+           $(document).ready(function(){
+		$($("#button8")).toggle(function (){  
+		  $("tr:first").css("background-color", "yellow"); 
+      }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });  
+		  
+		      $(document).ready(function(){
+		$($("#button9")).toggle(function (){  
+		  $("tr:last").css("background-color", "blue"); 
+      }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });  
+		   
+		     $(document).ready(function(){
+				 
+		$($("#button10")).toggle(function (){  
+		 $("body:contains('wiki')").css("text-decoration", "underline");
+		 }, function() {
+              $("p").css("border", "");
+		  });  
+		   });  
+		   
+		  
+		  $(document).ready(function(){
+		  $($("#button11")).toggle(function (){  
+		$("td:empty").text("Was empty!").css('background', 'rgb(255,220,200)');
+		 }, function() {
+              $("p").css("border", "");
+		  });  
+		   }); 
+		   
+		     $(document).ready(function(){
+		  $($("#button12")).toggle(function (){  
+		$('div:has(p)').css('background', 'rgb(255,220,200)');
+		 }, function() {
+              $("p").css("border", "");
+		  });  
+		   }); 
+		   
+		     $(document).ready(function(){
+		  $($("#button13")).toggle(function (){
+			  
+		$("#hidden").css('background', 'rgb(255,220,200)');
+		 }, function() {
+              $("p").css("border", "");
+		  });  
+		   }); 
+		  
+		  
+		  
+		      $(document).ready(function(){
+		$($("#button14")).toggle(function (){  
+		  $("ul.c > li").css("background-color", "yellow"); 
+      }, function() {
+              $("p").css("border", "");
+          });
+		  
+		  });
+		  
+      
+  </script>
+  
+  
+  <style type="text/css">
+  .a { color: Navy; }
+  .b { color: Maroon; }
+  </style>
+  
+  </head>
+  
+  
+  <body>
+	  
+      <ul id="list1" class="cls">List id="list1"
+          <li class="a">item 1   class="a"</li>
+          <li class="a">item 2   class="a"</li>
+          <li class="b">item 3   class="b"</li>
+          <li class="b">item 4   class="b"</li>
+          <li class="c">item 5   class="c"</li>
+      </ul>
+      
+      
+      <p class="a">This is paragraph 1   class="a"</p>
+      <p>This is paragraph 2</p>
+      <p class="b">This is paragraph 3   class="b"</p>
+      <p>This is paragraph 4</p>
+      <!-- Add multiple buttons for each selector -->
+      <input type="button" id="button1" value="Select all elements" />
+      <input type="button" id="button2" value="Select all list elements" />
+      <input type="button" id="button3" value="Select All paragraphs" />
+       <input type="button" id="button4" value="Select using element ids" />
+       <input type="button" id="button5" value="Select using element classes" />
+       <br><br>
+       
+       <a href="" rel="attribute1" >Google 1   attribute1</a><br><br>
+       <a href="" rel="attribute2" >Google 2   attribute2</a><br><br>
+       <a href="" rel="attribute3" >Google 3   attribute3</a><br><br>
+       
+       <table id="tab" border=2px;>
+       
+       <th>S.No</th><th>Country</th><th>Population</th>  
+      <tr><td>1</td><td>China</td><td>###</td></tr> 
+      <tr><td>2</td><td>India</td><td>###</td></tr>
+      <tr id="hidden" disabled="disabled"> </tr>
+      <tr><td>3</td><td>US</td><td>###</td></tr> 
+      <tr><td>4</td><td>Canada</td><td>###</td></tr> 
+       <tr><td></td><td></td><td></td></tr> 
+      <tr><td>5</td><td>Russia</td><td>###</td></tr> 
+       
+     
+       
+       </table><br>
+       <input type="button" id="button6" value="EVEN" />
+      <input type="button" id="button7" value="ODD" />
+      <input type="button" id="button8" value="FIRST" />
+       <input type="button" id="button9" value="LAST" />
+        <input type="button" id="button11" value="EMPTY" />
+        <input type="button" id="button13" value="HIDDEN" />
+        <input type="button" id="button14" value="CHILD" />
+       <br>  <br>  <br>
+       <div>
+       <p>WikiWikiWeb was the first wiki.[6] Ward Cunningham started developing WikiWikiWeb in Portland, Oregon, in 1994, and installed it on the Internet domain c2.com[7] on March 25, 1995. It was named by Cunningham, who remembered a Honolulu International Airport counter employee telling him to take the "Wiki Wiki Shuttle" bus that runs between the airport's terminals. According to Cunningham, "I chose wiki-wiki as an alliterative substitute for 'quick' and thereby avoided naming this stuff quick-web."[8][9]
+Cunningham was in part inspired by Apple's HyperCard. Apple had designed a system allowing users to create virtual "card stacks" supporting links among the various cards. Cunningham developed Vannevar Bush's ideas by allowing users to "comment on and change one another's text."[2][10]
+In the early 2000s, wikis were increasingly adopted in enterprise as collaborative software. Common uses included project communication, intranets, and documentation, initially for technical users. Today some companies use wikis as their only collaborative software and as a replacement for static intranets, and some schools and universities use wikis to enhance group learning. There may be greater use of wikis behind firewalls than on the public Internet.
+On March 15, 2007, wiki entered the online Oxford English Dictionary.[11]</p></div>
+       <input type="button" id="button10" value="CONTAINS" />
+        <input type="button" id="button12" value="HAS" />
+  </body>
+  </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      <title>Events with jQuery</title>
+       
+      <script type="text/javascript">
+          $(function() {
+              // Bind highlight function on mouseover & mouseleave event on evtTarget element
+              // unbind highlight function on click event on evtTarget element
+          });
+
+          function highlight(evt) {
+              $("#evtTarget").toggleClass("highlighted");
+          }
+          
+$(document).ready(function() {
+  $('#evtTarget').bind('click', function(event) {
+    alert('The mouse cursor is clicked');
+  });
+ });
+ 
+ $(document).ready(function() {
+  $('#button1').bind('click', function() {
+    $("div").slideToggle();
+  });
+ });
+ 
+ $(document).ready(function() {
+ $("div").bind("mouseenter mouseleave", function(event){
+$(this).toggleClass("over");
+});
+});
+
+
+$(document).ready(function(){
+  $("div").delegate("p","click",function(){
+	  alert("-----------");
+    $(this).slideToggle();
+  });
+  $("button1").click(function(){
+    $("<p>This is a new paragraph.</p>").insertAfter("button1").css("border", "3px solid green");
+  });
+});
+
+      </script>
+      <style type='text/css'>
+          .normal {
+              width: 300px;
+              height: 200px;
+              background-color: Yellow;
+              font-size: 18pt;cursor:pointer; 
+          }
+
+          .highlighted {
+              background-color: Red;
+          }
+          div.over { background: #ccc; }
+
+      </style>
+  </head>
+  <body>
+  <h1>Binding Event Example</h1>
+  <div id="evtTarget" class="normal">Mouse over this div to see the effect. Click on it to unbind the mouseover.</div>
+  <br>
+  <input type="button" id="button1" value="Slide"/>
+  </body>
+  </html>
