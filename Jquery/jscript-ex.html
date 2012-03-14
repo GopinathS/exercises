@@ -7,169 +7,184 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <script type="text/javascript">
       $("document").ready(function() {
-          // Example
-          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
-          $('#button1').toggle(function() {
-              $("*").css("border", "3px solid red");
+
+          $('#select_all').toggle(function() {
+              $("*").addClass('selected');
           }, function() {
-              $("p").css("border", "");
+			  
+		  // Corrected the code  
+			  			  
+              $("*").removeClass('selected');
           });
-      });
       
+         
+    
+          
+          $('#select_list').toggle(function() {
+              $("li").addClass('selected');
+          }, function() {
+			  
+			   // Corrected the code  
+			  
+              $("li").removeClass('selected');
+          });
+    
       
-      $("document").ready(function() {
-          // Example
-          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
-          $('#button2').toggle(function() {
-              $("li").css("border", "3px solid red");
+     
+          
+          $('#select_paragraph').toggle(function() {
+              $("p").addClass('selected');
           }, function() {
-              $("p").css("border", "");
+              $("p").removeClass('selected');
           });
-      });
       
-      $("document").ready(function() {
-          // Example
-          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
-          $('#button3').toggle(function() {
-              $("p").css("border", "3px solid red");
+       
+          
+          $('#select_element_ids').toggle(function() {
+              $("#list1").addClass('selected');
           }, function() {
-              $("p").css("border", "");
+			  
+			   // Corrected the code  
+			  
+              $("#list1").removeClass('selected');
           });
-      });
-        $("document").ready(function() {
-          // Example
-          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
-          $('#button4').toggle(function() {
-              $("#list1").css("border", "3px solid red");
+     
+        
+          
+          $('#select_element_classes').toggle(function() {
+              $(".a").addClass('selected');
           }, function() {
-              $("p").css("border", "");
+              $(".a").removeClass('selected');
           });
-      });
-        $("document").ready(function() {
-          // Example
-          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
-          $('#button5').toggle(function() {
-              $(".a").css("border", "3px solid red");
-          }, function() {
-              $("p").css("border", "");
-          });
-      });
+    
       
-      $(document).ready(function(){
+     
 		  
-		  $($("a[rel='attribute1']")).toggle(function (){
-			   $("a[rel='attribute1']").css("border", "3px solid red");
+		  $("a[rel='attribute1']").toggle(function (){
+			   $("a[rel='attribute1']").addClass('selected');
 			  }, function() {
-              $("p").css("border", "");
+              $("a[rel='attribute1']").removeClass('selected');
           });
 		  
-		  });  
+		
 		  
-		    $(document).ready(function(){
+		    
 		  
-		  $($("a[rel='attribute2']")).toggle(function (){
-			   $("a[rel='attribute2']").css("border", "3px solid red");
+		  $("a[rel='attribute2']").toggle(function (){
+			   $("a[rel='attribute2']").addClass('selected');
 			  }, function() {
-              $("p").css("border", "");
+              $("a[rel='attribute2']").removeClass('selected');
           });
 		  
-		  });  
+		 
 		  
-		    $(document).ready(function(){
+		
 		  
-		  $($("a[rel='attribute3']")).toggle(function (){
-			   $("a[rel='attribute3']").css("border", "3px solid red");
+		 $("a[rel='attribute3']").toggle(function (){
+			   $("a[rel='attribute3']").addClass('selected');
 			  }, function() {
-              $("p").css("border", "");
+              $("a[rel='attribute3']").removeClass('selected');
           });
 		  
-		  });     
+		    
 		  
 		  
-		  $(document).ready(function(){
-		$($("#button6")).toggle(function (){  
-		  $("tr:even").css("background-color", "#bbbbff"); 
+		
+	$("#select_even").toggle(function (){  
+		  $("tr:even").addClass('selected');
       }, function() {
-              $("p").css("border", "");
+              $("tr:even").removeClass('selected');
           });
 		  
-		  });  
+		 
 		  
 		  
-           $(document).ready(function(){
-		$($("#button7")).toggle(function (){  
-		  $("tr:odd").css("background-color", "gray"); 
+           
+		$("#select_odd").toggle(function (){  
+		  $("tr:odd").addClass('selected');
       }, function() {
-              $("p").css("border", "");
+              $("tr:odd").removeClass('selected');
           });
 		  
-		  });  
+		  
 		  
 		  	  
-           $(document).ready(function(){
-		$($("#button8")).toggle(function (){  
-		  $("tr:first").css("background-color", "yellow"); 
+          
+		$("#select_first").toggle(function (){  
+		  $("tr:first").addClass('selected');
       }, function() {
-              $("p").css("border", "");
+              $("tr:first").removeClass('selected');
           });
 		  
-		  });  
 		  
-		      $(document).ready(function(){
-		$($("#button9")).toggle(function (){  
-		  $("tr:last").css("background-color", "blue"); 
-      }, function() {
-              $("p").css("border", "");
-          });
 		  
-		  });  
 		   
-		     $(document).ready(function(){
+	$("#select_last").toggle(function (){  
+		  $("tr:last").addClass('selected');
+      }, function() {
+              $("tr:last").removeClass('selected');
+          });
+		  
+		   
+		   
+		    
 				 
-		$($("#button10")).toggle(function (){  
-		 $("body:contains('wiki')").css("text-decoration", "underline");
+		$("#contains").toggle(function (){  
+			
+		 $("div:contains('wiki')").addClass('selected');
 		 }, function() {
-              $("p").css("border", "");
+              $("#content:contains('wiki')").removeClass('selected');
 		  });  
-		   });  
+		   
 		   
 		  
-		  $(document).ready(function(){
-		  $($("#button11")).toggle(function (){  
-		$("td:empty").text("Was empty!").css('background', 'rgb(255,220,200)');
+		 
+		  $("#isEmpty").toggle(function (){  
+		$("td:empty").text("Was empty!").addClass('selected');
 		 }, function() {
-              $("p").css("border", "");
+              $("td:empty").removeClass('selected');
 		  });  
-		   }); 
+		  
 		   
-		     $(document).ready(function(){
-		  $($("#button12")).toggle(function (){  
-		$('div:has(p)').css('background', 'rgb(255,220,200)');
+		    
+		 $("#has-child").toggle(function (){  
+		$('div:has(p)').addClass('selected');
 		 }, function() {
-              $("p").css("border", "");
+              $("div:has(p)").removeClass('selected');
 		  });  
-		   }); 
 		   
-		     $(document).ready(function(){
-		  $($("#button13")).toggle(function (){
-			  
-		$("#hidden").css('background', 'rgb(255,220,200)');
-		 }, function() {
-              $("p").css("border", "");
-		  });  
-		   }); 
+		   
+		
 		  
 		  
-		  
-		      $(document).ready(function(){
-		$($("#button14")).toggle(function (){  
-		  $("ul.c > li").css("background-color", "yellow"); 
+		      
+	$("#button14").toggle(function (){  
+		  $("ul.c > li").addClass('selected'); 
       }, function() {
-              $("p").css("border", "");
+              $("ul.c > li").removeClass('selected');
           });
+		  
+		  
+		  
+		    $("#hide_show").toggle(function (){
+			  		  
+			  $("#hidden").hide();
+			  alert("A row is hidden !!!");
+			  	  
+			  
+			  },function (){
+				  
+				   $("#hidden").show();
+			  alert("The hidden row is shown !!!");
+			  			  
+				  });
+		  
+		  
 		  
 		  });
 		  
+		  
+		 
       
   </script>
   
@@ -177,6 +192,10 @@
   <style type="text/css">
   .a { color: Navy; }
   .b { color: Maroon; }
+  .selected{border:3px solid red;background-color:yellow;};
+  //div.textdeco{text-decoration:underline;);
+ 
+  
   </style>
   
   </head>
@@ -198,45 +217,44 @@
       <p class="b">This is paragraph 3   class="b"</p>
       <p>This is paragraph 4</p>
       <!-- Add multiple buttons for each selector -->
-      <input type="button" id="button1" value="Select all elements" />
-      <input type="button" id="button2" value="Select all list elements" />
-      <input type="button" id="button3" value="Select All paragraphs" />
-       <input type="button" id="button4" value="Select using element ids" />
-       <input type="button" id="button5" value="Select using element classes" />
+      <input type="button" id="select_all" value="Select all elements" />
+      <input type="button" id="select_list" value="Select all list elements" />
+      <input type="button" id="select_paragraph" value="Select All paragraphs" />
+       <input type="button" id="select_element_ids" value="Select using element ids" />
+       <input type="button" id="select_element_classes" value="Select using element classes" />
        <br><br>
        
        <a href="" rel="attribute1" >Google 1   attribute1</a><br><br>
        <a href="" rel="attribute2" >Google 2   attribute2</a><br><br>
        <a href="" rel="attribute3" >Google 3   attribute3</a><br><br>
        
-       <table id="tab" border=2px;>
+       <table id="tab" border=4px;>
        
        <th>S.No</th><th>Country</th><th>Population</th>  
       <tr><td>1</td><td>China</td><td>###</td></tr> 
       <tr><td>2</td><td>India</td><td>###</td></tr>
-      <tr id="hidden" disabled="disabled"> </tr>
-      <tr><td>3</td><td>US</td><td>###</td></tr> 
-      <tr><td>4</td><td>Canada</td><td>###</td></tr> 
+      <tr  id="hidden"> <td>3</td><td>Brazil</td><td>###</td></tr>
+      <tr><td>4</td><td>US</td><td>###</td></tr> 
+      <tr><td>5</td><td>Canada</td><td>###</td></tr> 
        <tr><td></td><td></td><td></td></tr> 
-      <tr><td>5</td><td>Russia</td><td>###</td></tr> 
+      <tr><td>6</td><td>Russia</td><td>###</td></tr> 
        
      
        
        </table><br>
-       <input type="button" id="button6" value="EVEN" />
-      <input type="button" id="button7" value="ODD" />
-      <input type="button" id="button8" value="FIRST" />
-       <input type="button" id="button9" value="LAST" />
-        <input type="button" id="button11" value="EMPTY" />
-        <input type="button" id="button13" value="HIDDEN" />
-        <input type="button" id="button14" value="CHILD" />
-       <br>  <br>  <br>
-       <div>
+       <input type="button" id="select_even" value="EVEN" />
+      <input type="button" id="select_odd" value="ODD" />
+      <input type="button" id="select_first" value="FIRST" />
+       <input type="button" id="select_last" value="LAST" />
+        <input type="button" id="isEmpty" value="EMPTY" />
+        <input type="button" id="hide_show" value="HIDE / SHOW" />
+              <br>  <br>  <br>
+       <div id="content">
        <p>WikiWikiWeb was the first wiki.[6] Ward Cunningham started developing WikiWikiWeb in Portland, Oregon, in 1994, and installed it on the Internet domain c2.com[7] on March 25, 1995. It was named by Cunningham, who remembered a Honolulu International Airport counter employee telling him to take the "Wiki Wiki Shuttle" bus that runs between the airport's terminals. According to Cunningham, "I chose wiki-wiki as an alliterative substitute for 'quick' and thereby avoided naming this stuff quick-web."[8][9]
 Cunningham was in part inspired by Apple's HyperCard. Apple had designed a system allowing users to create virtual "card stacks" supporting links among the various cards. Cunningham developed Vannevar Bush's ideas by allowing users to "comment on and change one another's text."[2][10]
 In the early 2000s, wikis were increasingly adopted in enterprise as collaborative software. Common uses included project communication, intranets, and documentation, initially for technical users. Today some companies use wikis as their only collaborative software and as a replacement for static intranets, and some schools and universities use wikis to enhance group learning. There may be greater use of wikis behind firewalls than on the public Internet.
 On March 15, 2007, wiki entered the online Oxford English Dictionary.[11]</p></div>
-       <input type="button" id="button10" value="CONTAINS" />
-        <input type="button" id="button12" value="HAS" />
+       <input type="button" id="contains" value="CONTAINS" />
+        <input type="button" id="has-child" value="HAS CHILD" />
   </body>
   </html>

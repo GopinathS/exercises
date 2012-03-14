@@ -18,40 +18,40 @@
       
       <script type="text/javascript">
           $("document").ready(function() {
-              $('#button1').toggle(function() {
+              $('#select_inputs').toggle(function() {
                   $("form :input").css("border", "3px solid red");
               }, function() {
                   $("form :input").css("border", "");
               });
-          });
+        
           
-            $("document").ready(function() {
-              $('#button2').toggle(function() {
+            
+              $('#select_buttons').toggle(function() {
                   $(":button").css("border", "3px solid red");
               }, function() {
                   $(":button").css("border", "");
               });
-          });
+        
           
           
-           $("document").ready(function() {
-              $('#button3').toggle(function() {
+         
+              $('#select_textbox').toggle(function() {
                   $(":text").css("border", "3px solid red");
               }, function() {
                   $(":text").css("border", "");
               });
-          });
+        
           
-            $("document").ready(function() {
-              $('#button4').toggle(function() {
+         
+              $('#select_textarea').toggle(function() {
                   $("textarea").css("border", "3px solid green");
               }, function() {
                   $("textarea").css("border", "");
               });
-          });
+        
           
-           $("document").ready(function() {
-              $('#button5').toggle(function() {
+        
+              $('#select_boxes').toggle(function() {
                  
                 $("form input:checkbox").wrap('<span></span>').parent().css("border", "3px solid green");
                   
@@ -159,10 +159,10 @@
 
   </form>
   <br><br>
-  <input type="button" id="button1" value="Select All Form inputs"/>
-  <input type="button" id="button2" value="Select All Form buttons"/>
-  <input type="button" id="button3" value="Select All Form text"/>
-    <input type="button" id="button4" value="Select All Form textarea"/>
-  <input type="button" id="button5" value="Select All Form select boxes"/>
+  <input type="button" id="select_inputs" value="Select All Form inputs"/>
+  <input type="button" id="select_buttons" value="Select All Form buttons"/>
+  <input type="button" id="select_textbox" value="Select All Form text"/>
+    <input type="button" id="select_textarea" value="Select All Form textarea"/>
+  <input type="button" id="select_boxes" value="Select All Form select boxes"/>
   </body>
   </html>

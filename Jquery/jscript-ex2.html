@@ -16,32 +16,43 @@
           }
           
 $(document).ready(function() {
-  $('#evtTarget').bind('click', function(event) {
-    alert('The mouse cursor is clicked');
-  });
- });
- 
- $(document).ready(function() {
-  $('#button1').bind('click', function() {
+ 	 
++  $('#evtTarget').bind('click', function(event) {
+ 	 
+ 	  $("#evtTarget").unbind();
++    alert('The mouseenter mouseleave is unbinded');
+	                                            });
+   
+	  $("#evtTarget").bind("mouseenter mouseleave", function(event){
+                                                                      $(this).toggleClass("over");
+                                                                      
+                                                                                                                                  
+                                                                 });
+  
+ 	 
+  $('#slide_effect').bind('click', function() {
+ 	 	
     $("div").slideToggle();
-  });
- });
- 
- $(document).ready(function() {
- $("div").bind("mouseenter mouseleave", function(event){
-$(this).toggleClass("over");
-});
 });
 
+$("#select_last").toggle(function (){  
+		  $("tr:last").addClass('selected');
+      }, function() {
+              $("tr:last").removeClass('selected');
+          });
 
-$(document).ready(function(){
+
+
   $("div").delegate("p","click",function(){
 	  alert("-----------");
     $(this).slideToggle();
   });
-  $("button1").click(function(){
-    $("<p>This is a new paragraph.</p>").insertAfter("button1").css("border", "3px solid green");
-  });
+  
+$("#slide_effect").click(function(){
+ 	 	
+    $('<p>This is a new paragraph.</p>').insertAfter("#slide_effect").css("border", "3px solid green");
+
+});
 });
 
       </script>
@@ -62,8 +73,12 @@ $(document).ready(function(){
   </head>
   <body>
   <h1>Binding Event Example</h1>
-  <div id="evtTarget" class="normal">Mouse over this div to see the effect. Click on it to unbind the mouseover.</div>
+  <div id="evtTarget" class="normal">Mouse over this div to see the effect. Click on it to unbind the mouseover.
+  
+  
+  </div>
   <br>
-  <input type="button" id="button1" value="Slide"/>
+  <input type="button" id="slide_effect" value="Slide"/>
+  <input type="button" id="Adding" value="Adding some text"/>
   </body>
   </html>
