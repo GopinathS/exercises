@@ -1,0 +1,199 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>jQuery Showing and Hiding an Element</title>
+       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript">
+         
+            $("document").ready(function() {
+				
+       
+          
+       
+// Show function         
+         $('#show').click(function(){
+				 $("#theDiv").show("slow");
+			});
+//Hide function			
+		 $("#hide").click(function () {
+			 //alert("Hiiiiiiiiii");
+            $("#theDiv").hide("slow");
+                }); 
+//Toggle function			
+		 $('#toggle').click(function(){
+			 $("ul").toggle();
+				
+			});
+
+			
+//Grow right function		
+		  $('#right').click(function(){
+			$("#theDiv").animate({
+    width: "85%",
+    opacity: 0.4,
+    marginLeft: "0.6in",
+    marginRight: "0.6in",
+    fontSize: "3em",
+    borderWidth: "10px"
+  }, 1500 );	
+			});
+			
+		 $('#big_text').click(function(){
+				
+			});
+			
+			
+// Moving the div to right			
+		 $("#movdiv_right").click(function(){
+            $(".block").animate({"left": "+=50px"}, "slow");
+            });
+
+// Moving the div to left
+        $("#movdiv_left").click(function(){
+           $(".block").animate({"left": "-=50px"}, "slow");
+            });
+			
+	
+   $("#fadein").click(function(){
+				 
+            $("p").fadeIn(1000);
+      
+
+			});	
+		 
+		 
+		 $('#fadeout').click(function(){
+				
+            $("p").fadeOut(1000);
+          
+			});
+			
+		 $('#fadeto3').click(function(){
+			 
+			 $("p").fadeTo("slow", 0.33);
+				
+			});						
+				
+		 $('#fadeup').click(function(){
+				 $("p").fadeTo("slow", 1.0);	
+			});						
+				
+				
+		 $('#slideup').click(function(){
+			 
+			 $("#theDiv").slideUp();
+				
+			});	
+			
+		 $('#slidedown').click(function(){
+				 $("#theDiv").slideDown();
+			});
+		
+		 $('#toggleslide').click(function(){
+				$("#theDiv").slideToggle("slow");
+			});		
+			$('#refresh').click(function(){ 
+				window.location.reload(true);
+			});	
+				});	
+							
+											
+										
+								
+          
+      </script>
+      <style type="text/css">
+
+     body{
+		 background-color:rgb(255,217,255);
+	 }
+          div#theDiv {
+			  position:absolute;
+              width: 250px;
+              height: 180px;
+              margin: 10px;
+              margin-top:150px;
+              padding: 20px;
+              background: gray;
+              border: 2px solid black;
+              cursor: pointer;
+          }
+          
+          div#buttons{
+			position:fixed;  
+			width: 150px;
+			background-color:rgb(255,255,135);
+			top:100px;
+              margin-top:50px;
+               margin-left:800px;
+               border-left: 5px solid #404040;
+               border-right: 5px solid #404040;
+               border-top: 5px solid #404040;
+               border-bottom: 5px solid #404040;
+               padding-top:20px;
+               padding-left:20px;
+               padding-bottom:20px;
+               padding-right:20px;
+                 
+		  }
+		  
+		  #list{
+			  font-size: 16pt;
+		  }
+          
+          p, span {
+			  
+              font-size: 16pt;
+              span { display:none; }
+          }
+          #paragraph1{
+			  background-color:yellow;
+			  
+		  }
+          button {
+              margin: 5px;
+          }
+          #para1{
+			  font-size: 30pt;
+		  }
+      </style>
+  </head>
+  <body>
+  
+  
+  
+     <p id="para1">Showing and Hiding an Element</p> 
+      <div id="theDiv" class="block">
+      
+      This Div is created to show the graphical features of the jquery.....
+      </div>
+      
+      
+ <ul id="list"><li>1</li>
+     <li>2</li>
+     <li>3</li>
+</ul> 
+ <ul style="display: none" id="list">
+ <li>a</li>
+     <li>b</li>
+     <li>c</li>
+</ul>
+<div id="buttons">
+      <button id="hide">Hide</button>
+      <button id="show">Show</button>
+      <button id="toggle">Toggle</button>
+      <button id="right">Grow Right</button>
+      <button id="refresh">Refresh</button>
+      <button id="movdiv_right">Move Div to Right</button>
+       <button id="movdiv_left">Move Div to Left</button>
+      <button id="fadeout">Fade Out</button>
+      <button id="fadein">Fade In</button>
+      
+      <button id="fadeto3">Fade To .3</button>
+      <button id="fadeup">Fade To 1.0</button>
+      <button id="slideup">Slide Up</button>
+      <button id="slidedown">Slide Down</button>
+      <button id="toggleslide">Toggle Slide</button><br>
+ </div>    
+  </body>
+  </html>
