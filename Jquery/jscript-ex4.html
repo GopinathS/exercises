@@ -1,0 +1,139 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>Document</title>
+      
+      
+       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+      
+       <script type="text/javascript">
+       
+           $("document").ready(function() {
+			
+			
+			$('#Get').click(function(){
+				var txt=$('#content').val();
+				if (txt!="")
+				{
+				alert(txt);
+				}
+				else
+				{
+				alert("Textbox is empty!!!!");
+				}
+			});
+			
+			
+			$('#Set').click(function(){
+				var txt=$('#content').val();
+				if (txt!="")
+				{
+				$('#span_text').text(txt);
+				}
+				else
+				{
+				alert("Please Enter text in TextBox!");
+				}
+			});
+			
+			
+			$('#AddClass').click(function(){
+				$("#para").addClass("a");
+				
+			});
+			
+			
+			$('#RemoveClass').click(function(){
+				$("#para").removeClass("a");
+				
+			});
+			
+			
+			$("#clone").click(function(){
+				$("#clone").clone().appendTo("body");
+				alert("Cloned the clone button !!!")
+			});
+			
+			$("#append").click(function () {
+				$("#content_area").append(" Appended text");
+			});
+			
+			
+			$("#prepend").click(function () {
+				$("#content_area").prepend("Prepended text ");
+			});
+			
+			
+			$('#refresh').click(function(){ 
+				window.location.reload(true);
+			});
+			
+			
+			$("#before").click(function () {
+				$("#content_area").before("<br />Content added before the paragraph");
+			});
+			
+			$("#after").click(function () {
+				$("#content_area").after("<br />Content added after the paragraph");
+				
+							
+			});
+			
+          });
+			
+		
+       
+       </script>
+       
+          
+      
+      <style type="text/css">
+		  html{
+			  margin:auto;
+      }
+body{
+			  background-color:gray;
+      }
+        .a { color: Navy; }
+        .b { color: Maroon; }
+        div { color:red; }
+
+      </style>
+      
+  </head>
+  
+  <body ></body>
+          
+      
+      <form method="post">
+      
+       Enter the text <input type="text" id="content"/>
+       <input type="button" id="Get" value="Get_content"/>
+       <input type="button" id="Set" value="Set_content"/>
+       <span id="span_text"></span>
+       <p id="para"><b>JQuery</b> is a cross-browser JavaScript library designed to simplify the client-side scripting of HTML.[1] It was released in January 2006 at BarCamp NYC by John Resig. Used by over 52% of the 10,000 most visited websites, jQuery is the most popular JavaScript library in use today.[2][3]</p>
+        <input type="button" id="AddClass" value="Add Class"/>
+         <input type="button" id="RemoveClass" value="Remove Class"/><br><br>
+         <p id="content_area"><b>JQuery</b> is a cross-browser JavaScript library designed to simplify the client-side scripting of HTML.[1] It was released in January 2006 at BarCamp NYC by John Resig. Used by over 52% of the 10,000 most visited websites, jQuery is the most popular JavaScript library in use today.[2][3]</p>
+         <input type="button" id="append" value="Append"/>
+         <input type="button" id="prepend" value="Prepend"/>
+         <input type="button" id="before" value="Before"/>
+         <input type="button" id="after" value="After"/>
+          <input type="button" id="clone" value="Clone"/>
+          <br><br><br><br><br>
+          <input type="button" id="refresh" value="REFRESH"/>
+          
+          
+        
+         
+         
+         
+       <div id="text_display"></div>
+      
+      </form>
+      
+   
+      
+      
+      
+  </body>
+  </html>
